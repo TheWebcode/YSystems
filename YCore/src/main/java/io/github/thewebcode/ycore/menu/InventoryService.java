@@ -1,6 +1,6 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode.menu;
+package io.github.thewebcode.ycore.menu;
 
-import io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility.PlayerMenuUtility;
+import io.github.thewebcode.ycore.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;

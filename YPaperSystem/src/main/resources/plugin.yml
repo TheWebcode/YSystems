@@ -1,0 +1,8 @@
+name: YPaperSystem
+version: '${project.version}'
+main: io.github.thewebcode.ypapersystem.YPaperSystem
+api-version: 1.19
+prefix: YPaper
+depend: [ YCore ]
+authors: [ TheWebcode ]
+description: Y Paper Server System

@@ -1,0 +1,8 @@
+"error":
+  "no-permission": "&cYou do not have permission to use this command."
+  "no-console": "&cYou must be a player to use this command."
+  "no-player": "&cPlayer not found."
+  "no-world": "&cWorld not found."
+  "no-command": "&cCommand not found."
+  "no-arg": "&cInvalid arguments."
+  "no-money": "&cYou do not have enough money."

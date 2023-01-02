@@ -1,4 +1,4 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode.event;
+package io.github.thewebcode.ycore.event;
 
 import java.lang.reflect.Method;
 

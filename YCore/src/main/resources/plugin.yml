@@ -1,7 +1,12 @@
-name: Io.github.thewebcode.ycore
+name: YCore
 version: '${project.version}'
-main: ycore.io.github.thewebcode.ycore.Io.github.thewebcode.YCore
+main: io.github.thewebcode.ycore.YCore
 api-version: 1.19
 prefix: YCore
 authors: [ TheWebcode ]
 description: YCore Plugin
+commands:
+  ysystem:
+    description: YCore System Command
+    usage: /ysystem <reload|save>
+    aliases: [ ysys ]

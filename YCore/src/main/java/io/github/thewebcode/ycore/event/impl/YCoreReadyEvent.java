@@ -1,7 +1,7 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode.event.impl;
+package io.github.thewebcode.ycore.event.impl;
 
-import io.github.thewebcode.ycore.Io.github.thewebcode.YCore;
-import io.github.thewebcode.ycore.Io.github.thewebcode.event.Event;
+import io.github.thewebcode.ycore.YCore;
+import io.github.thewebcode.ycore.event.Event;
 
 public class YCoreReadyEvent extends Event {
     private YCore instance;

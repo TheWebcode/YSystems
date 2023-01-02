@@ -1,4 +1,4 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility;
+package io.github.thewebcode.ycore.menu.menuutility;
 
 import org.bukkit.entity.Player;
 

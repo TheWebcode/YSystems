@@ -1,4 +1,4 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode.event;
+package io.github.thewebcode.ycore.event;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class EventManager {
 
         final ArrayList<EventData> flexableArray = new ArrayList<EventData>();
 
-        for(final byte b : io.github.thewebcode.ycore.Io.github.thewebcode.event.EventPriority.VALUE_ARRAY) {
+        for(final byte b : EventPriority.VALUE_ARRAY) {
             for(EventData methodData : EventManager.REGISTRY_MAP.get(clazz)) {
                 if(methodData.priority == b) {
                     flexableArray.add(methodData);

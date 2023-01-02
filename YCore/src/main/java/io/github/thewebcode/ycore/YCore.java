@@ -1,6 +1,8 @@
-package io.github.thewebcode.ycore.Io.github.thewebcode;
+package io.github.thewebcode.ycore;
 
-import io.github.thewebcode.ycore.Io.github.thewebcode.event.impl.YCoreReadyEvent;
+import io.github.thewebcode.ycore.command.CommandManager;
+import io.github.thewebcode.ycore.command.YSystemCommand;
+import io.github.thewebcode.ycore.event.impl.YCoreReadyEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -8,13 +10,22 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class YCore extends JavaPlugin {
     private static YCore instance;
+    private CommandManager commandManager;
 
     @Override
     public void onEnable() {
         instance = this;
+        this.commandManager = new CommandManager();
         printPluginLogo(true);
 
+        registerCommands();
         new YCoreReadyEvent(instance).call();
+    }
+
+    private void registerCommands() {
+        YSystemCommand command = new YSystemCommand();
+        getCommand("ysystem").setExecutor(command);
+        getCommand("ysystem").setTabCompleter(command);
     }
 
     @Override
@@ -41,7 +52,11 @@ public final class YCore extends JavaPlugin {
         console.sendMessage("----------------------------------------");
     }
 
-    public static YCore getInstance() {
+    public CommandManager getCommandManager() {
+        return commandManager;
+    }
+
+    public static YCore get() {
         return instance;
     }
 }
