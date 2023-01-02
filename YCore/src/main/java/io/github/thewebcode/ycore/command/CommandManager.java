@@ -1,5 +1,9 @@
 package io.github.thewebcode.ycore.command;
 
+import io.github.thewebcode.ycore.event.Event;
+import io.github.thewebcode.ycore.event.EventCancelable;
+import io.github.thewebcode.ycore.event.impl.YCommandRegisterEvent;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,6 +16,9 @@ public class CommandManager {
                 throw new IllegalArgumentException("Command already exists!");
             }
         });
+
+        EventCancelable call = (EventCancelable) new YCommandRegisterEvent(command).call();
+        if(call.isCancelled()) return;
 
         commands.add(command);
     }

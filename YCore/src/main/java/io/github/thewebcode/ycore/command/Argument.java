@@ -44,4 +44,8 @@ public class Argument {
         }
         return map;
     }
+
+    public static HashMap<Integer, Argument> empty(){
+        return new HashMap<Integer, Argument>();
+    }
 }

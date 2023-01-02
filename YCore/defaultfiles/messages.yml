@@ -1,8 +1,9 @@
 "error":
   "no-permission": "&cYou do not have permission to use this command."
-  "no-console": "&cYou must be a player to use this command."
-  "no-player": "&cPlayer not found."
-  "no-world": "&cWorld not found."
-  "no-command": "&cCommand not found."
-  "no-arg": "&cInvalid arguments."
-  "no-money": "&cYou do not have enough money."
+  "not-a-player": "&cYou must be a player to use this command."
+  "target-not-found": "&cPlayer not found."
+  "command-not-found": "&cCommand not found."
+  "invalid-argument": "&cInvalid arguments."
+  "configreset": "&cCould not reset config."
+"config":
+  "reset": "&aConfig was reset successfully."

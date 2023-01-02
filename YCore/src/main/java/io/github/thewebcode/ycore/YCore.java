@@ -2,6 +2,7 @@ package io.github.thewebcode.ycore;
 
 import io.github.thewebcode.ycore.command.CommandManager;
 import io.github.thewebcode.ycore.command.YSystemCommand;
+import io.github.thewebcode.ycore.command.impl.ConfigCommand;
 import io.github.thewebcode.ycore.event.impl.YCoreReadyEvent;
 import io.github.thewebcode.ycore.util.FileManager;
 import org.bukkit.Bukkit;
@@ -26,6 +27,7 @@ public final class YCore extends JavaPlugin {
 
         registerCommands();
 
+        commandManager.register(new ConfigCommand());
         new YCoreReadyEvent(instance).call();
     }
 
@@ -65,6 +67,10 @@ public final class YCore extends JavaPlugin {
 
     public FileManager getFileManager() {
         return fileManager;
+    }
+
+    public String getMessage(String key){
+        return fileManager.getMessage(key);
     }
 
     public static YCore get() {
