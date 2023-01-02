@@ -19,11 +19,11 @@ public class ServerSettingsCommand implements YCommand {
         Player player = (Player) sender;
 
         if (!player.hasPermission("y.serversettings")) {
-            player.sendMessage(YCore.get().getFileManager().getMessage("error.no-permission"));
+            player.sendMessage(YCore.get().getMessage("error.no-permission"));
             return;
         }
 
-        //TODO: Open ServerSettingsMenu
+        //TODO: Open server settings menu
     }
 
     @Override

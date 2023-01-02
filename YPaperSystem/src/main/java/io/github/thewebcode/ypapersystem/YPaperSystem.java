@@ -17,7 +17,7 @@ public final class YPaperSystem extends JavaPlugin {
     }
 
     private void printLogoMessage(boolean pluginEnabled) {
-        Bukkit.getConsoleSender().sendMessage("\n----------------------------------------\n __     _______                      \n" +
+        Bukkit.getConsoleSender().sendMessage("\n\n----------------------------------------\n __     _______                      \n" +
                 " \\ \\   / /  __ \\                     \n" +
                 "  \\ \\_/ /| |__) |_ _ _ __   ___ _ __ \n" +
                 "   \\   / |  ___/ _` | '_ \\ / _ \\ '__|\n" +
@@ -25,7 +25,7 @@ public final class YPaperSystem extends JavaPlugin {
                 "    |_|  |_|   \\__,_| .__/ \\___|_|   \n" +
                 "                    | |              \n" +
                 "                    |_|              " + " v" + getDescription().getVersion() + " by TheWebCode is now " + (pluginEnabled ? "§aenabled" : "§cdisabled") + "§f!\n" +
-                "----------------------------------------");
+                "----------------------------------------\n");
     }
 
     public static YPaperSystem getInstance() {
