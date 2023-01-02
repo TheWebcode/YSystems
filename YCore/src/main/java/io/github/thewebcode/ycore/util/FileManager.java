@@ -1,5 +1,6 @@
 package io.github.thewebcode.ycore.util;
 
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import io.github.thewebcode.ycore.YCore;
@@ -63,6 +64,20 @@ public class FileManager {
         } catch (Exception e) {
             e.printStackTrace();
             return false;
+        }
+    }
+
+    public void updateMessage(String path, String message){
+        try {
+            JsonObject jsonObject = new JsonParser().parse(FileUtils.readFileToString(messagesFile)).getAsJsonObject();
+            jsonObject.remove(path);
+            jsonObject.addProperty(path, message);
+            Gson gson = new Gson();
+            String s = gson.toJson(jsonObject);
+            FileUtils.delete(messagesFile);
+            FileUtils.writeStringToFile(messagesFile, s);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

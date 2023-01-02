@@ -22,5 +22,6 @@
   "inventory.yclientsettings.items.allowonlyyclient.name": "&aAllow only YClient",
   "inventory.yclientsettings.items.allowonlyyclient.lore": "&7Allow only Users using YClient to join the Server.",
   "inventory.yclientsettings.items.allowonlyyclient.noapi.name": "&cYClient API not found.",
-  "inventory.yclientsettings.items.allowonlyyclient.noapi.lore": "&7YClient API is required to use this feature."
+  "inventory.yclientsettings.items.allowonlyyclient.noapi.lore": "&7YClient API is required to use this feature.",
+  "bungeecord.motd": "&8&l>>&eWelcome on this Server using Y Systems &8&l<<&r"
 }
