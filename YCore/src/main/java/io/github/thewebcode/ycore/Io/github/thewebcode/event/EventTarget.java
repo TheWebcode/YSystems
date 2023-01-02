@@ -1,4 +1,4 @@
-package ycore.io.github.thewebcode.ycore.Io.github.thewebcode.event;
+package io.github.thewebcode.ycore.Io.github.thewebcode.event;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

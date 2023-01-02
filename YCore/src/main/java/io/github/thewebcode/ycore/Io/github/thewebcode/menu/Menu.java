@@ -1,5 +1,6 @@
-package ycore.io.github.thewebcode.ycore.Io.github.thewebcode.menu;
+package io.github.thewebcode.ycore.Io.github.thewebcode.menu;
 
+import io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -7,7 +8,6 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import ycore.io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility.PlayerMenuUtility;
 
 import java.util.Arrays;
 

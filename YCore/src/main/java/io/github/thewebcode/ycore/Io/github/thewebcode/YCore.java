@@ -1,10 +1,10 @@
-package ycore.io.github.thewebcode.ycore.Io.github.thewebcode;
+package io.github.thewebcode.ycore.Io.github.thewebcode;
 
+import io.github.thewebcode.ycore.Io.github.thewebcode.event.impl.YCoreReadyEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-import ycore.io.github.thewebcode.ycore.Io.github.thewebcode.event.impl.YCoreReadyEvent;
 
 public final class YCore extends JavaPlugin {
     private static YCore instance;

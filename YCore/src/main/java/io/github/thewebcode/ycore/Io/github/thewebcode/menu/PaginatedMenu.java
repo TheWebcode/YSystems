@@ -1,8 +1,8 @@
-package ycore.io.github.thewebcode.ycore.Io.github.thewebcode.menu;
+package io.github.thewebcode.ycore.Io.github.thewebcode.menu;
 
+import io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import ycore.io.github.thewebcode.ycore.Io.github.thewebcode.menu.menuutility.PlayerMenuUtility;
 
 public abstract class PaginatedMenu extends Menu {
 
