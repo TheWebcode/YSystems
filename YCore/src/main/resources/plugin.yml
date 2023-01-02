@@ -1,0 +1,7 @@
+name: Io.github.thewebcode.ycore
+version: '${project.version}'
+main: ycore.io.github.thewebcode.ycore.Io.github.thewebcode.YCore
+api-version: 1.19
+prefix: YCore
+authors: [ TheWebcode ]
+description: YCore Plugin
