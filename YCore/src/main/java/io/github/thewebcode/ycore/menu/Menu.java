@@ -1,9 +1,12 @@
 package io.github.thewebcode.ycore.menu;
 
 import io.github.thewebcode.ycore.YCore;
+import io.github.thewebcode.ycore.event.EventCancelable;
+import io.github.thewebcode.ycore.event.impl.PlayerOpenMenuEvent;
 import io.github.thewebcode.ycore.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
@@ -33,11 +36,14 @@ public abstract class Menu implements InventoryHolder {
     public abstract void setMenuItems();
 
     public void open() {
+        EventCancelable event = (EventCancelable) new PlayerOpenMenuEvent(this).call();
         inventory = Bukkit.createInventory(this, getSlots(), getMenuName());
 
         this.setMenuItems();
 
+        if(event.isCancelled()) return;
         playerMenuUtility.getOwner().openInventory(inventory);
+        playerMenuUtility.getOwner().playSound(playerMenuUtility.getOwner(), Sound.BLOCK_BARREL_OPEN, 1, 1);
     }
 
     @Override
@@ -86,4 +92,7 @@ public abstract class Menu implements InventoryHolder {
         return item;
     }
 
+    public PlayerMenuUtility getPlayerMenuUtility() {
+        return playerMenuUtility;
+    }
 }

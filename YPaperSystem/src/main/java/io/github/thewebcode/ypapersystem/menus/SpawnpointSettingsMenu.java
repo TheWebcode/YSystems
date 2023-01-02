@@ -29,7 +29,8 @@ public class SpawnpointSettingsMenu extends Menu {
         String displayName = currentItem.getItemMeta().getDisplayName();
 
         if (displayName.equalsIgnoreCase(BACK_ITEM.getItemMeta().getDisplayName())) {
-            new SpawnpointSettingsMenu(playerMenuUtility).open();
+            new SettingsMenu(playerMenuUtility).open();
+            return;
         }
     }
 

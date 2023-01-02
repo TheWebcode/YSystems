@@ -34,7 +34,8 @@ public class SettingsMenu extends Menu {
         }
 
         if(displayName.equalsIgnoreCase(YCore.get().getMessage("inventory.settings.items.spawnsettings.name"))){
-
+            new SpawnpointSettingsMenu(playerMenuUtility).open();
+            return;
         }
 
     }
