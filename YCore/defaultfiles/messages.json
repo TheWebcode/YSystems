@@ -14,5 +14,6 @@
   "inventory.settings.items.spawner.name": "&5Spawnpoint Settings",
   "inventory.settings.items.spawner.lore": "&7Click to change the Spawnpoint Settings.",
   "inventory.spawnpointsettings.name": "&8&l>>&eSpawnpoint Settings",
-  "inventory.spawnpointsettings.items.barrier.name": "&aSet Spawnpoint"
+  "inventory.spawnpointsettings.items.barrier.name": "&aSet Spawnpoint",
+  "inventory.spawnpointsettings.items.barrier.lore": "&7Click to set the Spawnpoint to your position."
 }

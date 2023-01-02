@@ -5,6 +5,7 @@ import io.github.thewebcode.ycore.menu.Menu;
 import io.github.thewebcode.ycore.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.Material;
 import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class ServerSettingsMenu extends Menu {
 
@@ -30,5 +31,7 @@ public class ServerSettingsMenu extends Menu {
     @Override
     public void setMenuItems() {
         YCore yCore = YCore.get();
+        ItemStack spawnpointSettings = yCore.itemFactory.create(Material.SPAWNER, yCore.getMessage("inventory.settings.items.spawner.name"), yCore.getMessage("inventory.settings.items.spawner.lore"));
+
     }
 }
