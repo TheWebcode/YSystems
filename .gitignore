@@ -26,7 +26,8 @@
 
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
-
+.gitignore
+./.gitignore
 ## File-based project format:
 *.iws
 
