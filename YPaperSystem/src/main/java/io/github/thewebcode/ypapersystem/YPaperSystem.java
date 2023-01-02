@@ -1,5 +1,8 @@
 package io.github.thewebcode.ypapersystem;
 
+import io.github.thewebcode.ycore.YCore;
+import io.github.thewebcode.ycore.command.impl.ConfigCommand;
+import io.github.thewebcode.ypapersystem.commands.ServerSettingsCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -8,6 +11,7 @@ public final class YPaperSystem extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        YCore.get().getCommandManager().register(new ServerSettingsCommand());
         printLogoMessage(true);
     }
 
