@@ -1,5 +1,7 @@
 package io.github.thewebcode.ycore.util;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import io.github.thewebcode.ycore.YCore;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.ChatColor;
@@ -11,16 +13,16 @@ import java.net.URL;
 public class FileManager {
     private File FOLDER, configFile, messagesFile;
 
-    private YamlConfiguration config, messages;
+    private YamlConfiguration config;
 
 
-    String messageFileUrl = "https://raw.githubusercontent.com/TheWebcode/YSystems/master/YCore/defaultfiles/messages.yml";
+    String messageFileUrl = "https://raw.githubusercontent.com/TheWebcode/YSystems/master/YCore/defaultfiles/messages.json";
     String configFileUrl = "https://raw.githubusercontent.com/TheWebcode/YSystems/master/YCore/defaultfiles/config.yml";
 
     public FileManager(){
         FOLDER = new File("plugins/YCore");
         configFile = new File(FOLDER, "config.yml");
-        messagesFile = new File(FOLDER, "messages.yml");
+        messagesFile = new File(FOLDER, "messages.json");
 
         try {
 
@@ -38,13 +40,11 @@ public class FileManager {
         }
 
         config = YamlConfiguration.loadConfiguration(configFile);
-        messages = YamlConfiguration.loadConfiguration(messagesFile);
     }
 
     public void saveFiles() {
         try{
             config.save(configFile);
-            messages.save(messagesFile);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -59,8 +59,6 @@ public class FileManager {
             FileUtils.copyURLToFile(new URL(messageFileUrl), messagesFile);
 
             config = YamlConfiguration.loadConfiguration(configFile);
-            messages = YamlConfiguration.loadConfiguration(messagesFile);
-
             return true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -69,6 +67,13 @@ public class FileManager {
     }
 
     public String getMessage(String key) {
-        return ChatColor.translateAlternateColorCodes('&', messages.getString(key));
+        try {
+            JsonObject json = new JsonParser().parse(FileUtils.readFileToString(messagesFile, "UTF-8")).getAsJsonObject();
+            return ChatColor.translateAlternateColorCodes('&', json.get(key).getAsString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return "";
     }
 }

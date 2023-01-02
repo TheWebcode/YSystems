@@ -1,9 +1,0 @@
-"error":
-  "no-permission": "&cYou do not have permission to use this command."
-  "not-a-player": "&cYou must be a player to use this command."
-  "target-not-found": "&cPlayer not found."
-  "command-not-found": "&cCommand not found."
-  "invalid-argument": "&cInvalid arguments."
-  "configreset": "&cCould not reset config."
-"config":
-  "reset": "&aConfig was reset successfully."

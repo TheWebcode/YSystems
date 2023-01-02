@@ -3,17 +3,21 @@ package io.github.thewebcode.ycore;
 import io.github.thewebcode.ycore.command.CommandManager;
 import io.github.thewebcode.ycore.command.YSystemCommand;
 import io.github.thewebcode.ycore.command.impl.ConfigCommand;
+import io.github.thewebcode.ycore.event.Eventlistener;
 import io.github.thewebcode.ycore.event.impl.YCoreReadyEvent;
 import io.github.thewebcode.ycore.util.FileManager;
+import io.github.thewebcode.ycore.util.ItemFactory;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Logger;
 
 public final class YCore extends JavaPlugin {
     public static Logger logger = Logger.getLogger("YCore");
+    public ItemFactory itemFactory = new ItemFactory();
     private static YCore instance;
     private CommandManager commandManager;
     private FileManager fileManager;
@@ -26,9 +30,16 @@ public final class YCore extends JavaPlugin {
         printPluginLogo(true);
 
         registerCommands();
+        registerEvents();
 
         commandManager.register(new ConfigCommand());
         new YCoreReadyEvent(instance).call();
+    }
+
+    private void registerEvents(){
+        PluginManager pluginManager = Bukkit.getPluginManager();
+
+        pluginManager.registerEvents(new Eventlistener(), this);
     }
 
     private void registerCommands() {

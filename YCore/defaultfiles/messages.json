@@ -1,0 +1,12 @@
+{
+  "error.no_permission": "You do not have permission to use this command.",
+  "error.no_player": "You must be a player to use this command.",
+  "error.target_not_found": "The provided Player could not be found.",
+  "error.command_not_found": "The Command does not exist.",
+  "error.invalid_argument": "Invalid Argument.",
+  "error.configreset": "The Config could not be reset.",
+  "config.reset": "The Config has been reset.",
+  "inventory.settings.name": "&8&l>>&eSettings",
+  "inventory.settings.items.spawner.name": "&5Spawnpoint Settings",
+  "inventory.settings.items.spawner.lore": "&7Click to change the Spawnpoint Settings."
+}
