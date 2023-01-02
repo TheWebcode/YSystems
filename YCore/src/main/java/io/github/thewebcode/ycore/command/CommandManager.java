@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CommandManager {
-    private ArrayList<YCommand> commands;
+    private ArrayList<YCommand> commands = new ArrayList<>();
 
     public void register(YCommand command) {
         commands.forEach(cmd -> {

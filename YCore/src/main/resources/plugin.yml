@@ -8,5 +8,4 @@ description: YCore Plugin
 commands:
   ysystem:
     description: YCore System Command
-    usage: /ysystem <reload|save>
     aliases: [ ysys ]

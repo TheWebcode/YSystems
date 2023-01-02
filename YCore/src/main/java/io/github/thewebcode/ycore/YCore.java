@@ -3,22 +3,29 @@ package io.github.thewebcode.ycore;
 import io.github.thewebcode.ycore.command.CommandManager;
 import io.github.thewebcode.ycore.command.YSystemCommand;
 import io.github.thewebcode.ycore.event.impl.YCoreReadyEvent;
+import io.github.thewebcode.ycore.util.FileManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.logging.Logger;
+
 public final class YCore extends JavaPlugin {
+    public static Logger logger = Logger.getLogger("YCore");
     private static YCore instance;
     private CommandManager commandManager;
+    private FileManager fileManager;
 
     @Override
     public void onEnable() {
         instance = this;
+        this.fileManager = new FileManager();
         this.commandManager = new CommandManager();
         printPluginLogo(true);
 
         registerCommands();
+
         new YCoreReadyEvent(instance).call();
     }
 
@@ -54,6 +61,10 @@ public final class YCore extends JavaPlugin {
 
     public CommandManager getCommandManager() {
         return commandManager;
+    }
+
+    public FileManager getFileManager() {
+        return fileManager;
     }
 
     public static YCore get() {
