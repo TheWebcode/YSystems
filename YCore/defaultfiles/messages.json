@@ -6,7 +6,13 @@
   "error.invalid_argument": "&cInvalid Argument.",
   "error.configreset": "&cThe Config could not be reset.",
   "config.reset": "&aThe Config has been reset.",
+  "inventory.back": "&aBack",
+  "inventory.left": "&a<",
+  "inventory.right": "&a>",
+  "inventory.close": "&cClose",
   "inventory.settings.name": "&8&l>>&eSettings",
   "inventory.settings.items.spawner.name": "&5Spawnpoint Settings",
-  "inventory.settings.items.spawner.lore": "&7Click to change the Spawnpoint Settings."
+  "inventory.settings.items.spawner.lore": "&7Click to change the Spawnpoint Settings.",
+  "inventory.spawnpointsettings.name": "&8&l>>&eSpawnpoint Settings",
+  "inventory.spawnpointsettings.items.barrier.name": "&aSet Spawnpoint",
 }
