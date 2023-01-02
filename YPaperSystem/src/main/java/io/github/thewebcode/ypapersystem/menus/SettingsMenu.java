@@ -38,15 +38,23 @@ public class SettingsMenu extends Menu {
             return;
         }
 
+        if(displayName.equalsIgnoreCase(YCore.get().getMessage("inventory.settings.items.yclientsettings.name"))){
+            new YSettingsMenu(playerMenuUtility).open();
+            return;
+        }
+
     }
 
     @Override
     public void setMenuItems() {
         YCore yCore = YCore.get();
         ItemStack spawnpointSettings = yCore.itemFactory.create(Material.NETHER_STAR, yCore.getMessage("inventory.settings.items.spawnsettings.name"), yCore.getMessage("inventory.settings.items.spawnsettings.lore"));
+        ItemStack ysettingsMenu = yCore.itemFactory.create(Material.COMMAND_BLOCK, yCore.getMessage("inventory.yclientsettings.name"), yCore.getMessage("inventory.yclientsettings.lore"));
+
 
 
         inventory.setItem(11, spawnpointSettings);
+        inventory.setItem(15, ysettingsMenu);
 
         inventory.setItem(22, CLOSE_ITEM);
     }
