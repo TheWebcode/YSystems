@@ -3,6 +3,8 @@ package io.github.thewebcode.ypapersystem.commands;
 import io.github.thewebcode.ycore.YCore;
 import io.github.thewebcode.ycore.command.Argument;
 import io.github.thewebcode.ycore.command.YCommand;
+import io.github.thewebcode.ycore.menu.InventoryService;
+import io.github.thewebcode.ypapersystem.menus.SettingsMenu;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -23,7 +25,8 @@ public class ServerSettingsCommand implements YCommand {
             return;
         }
 
-        //TODO: Open server settings menu
+        new SettingsMenu(YCore.get().inventoryService.get(player)).open();
+
     }
 
     @Override

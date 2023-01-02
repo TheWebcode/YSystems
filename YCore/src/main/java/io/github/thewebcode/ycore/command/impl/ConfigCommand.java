@@ -11,7 +11,7 @@ public class ConfigCommand implements YCommand {
     @Override
     public void execute(CommandSender sender, String label, String[] args) {
         if(args.length == 0) {
-            sender.sendMessage(YCore.get().getFileManager().getMessage("error.invalid-argument"));
+            sender.sendMessage(YCore.get().getFileManager().getMessage("error.invalid_argument"));
             return;
         }
 

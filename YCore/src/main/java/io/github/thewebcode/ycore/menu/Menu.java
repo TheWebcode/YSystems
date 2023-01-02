@@ -1,5 +1,6 @@
 package io.github.thewebcode.ycore.menu;
 
+import io.github.thewebcode.ycore.YCore;
 import io.github.thewebcode.ycore.menu.menuutility.PlayerMenuUtility;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -16,6 +17,8 @@ public abstract class Menu implements InventoryHolder {
     protected PlayerMenuUtility playerMenuUtility;
     protected Inventory inventory;
     protected ItemStack FILLER_GLASS = makeItem(Material.GRAY_STAINED_GLASS_PANE, " ");
+    protected ItemStack BACK_ITEM = makeItem(Material.BARRIER, YCore.get().getMessage("inventory.back"));
+    protected ItemStack CLOSE_ITEM = makeItem(Material.BARRIER, YCore.get().getMessage("inventory.close"));
 
     public Menu(PlayerMenuUtility playerMenuUtility) {
         this.playerMenuUtility = playerMenuUtility;

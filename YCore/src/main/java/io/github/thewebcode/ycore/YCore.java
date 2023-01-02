@@ -5,6 +5,7 @@ import io.github.thewebcode.ycore.command.YSystemCommand;
 import io.github.thewebcode.ycore.command.impl.ConfigCommand;
 import io.github.thewebcode.ycore.event.Eventlistener;
 import io.github.thewebcode.ycore.event.impl.YCoreReadyEvent;
+import io.github.thewebcode.ycore.menu.InventoryService;
 import io.github.thewebcode.ycore.util.FileManager;
 import io.github.thewebcode.ycore.util.ItemFactory;
 import org.bukkit.Bukkit;
@@ -18,6 +19,7 @@ import java.util.logging.Logger;
 public final class YCore extends JavaPlugin {
     public static Logger logger = Logger.getLogger("YCore");
     public ItemFactory itemFactory = new ItemFactory();
+    public InventoryService inventoryService = new InventoryService();
     private static YCore instance;
     private CommandManager commandManager;
     private FileManager fileManager;
