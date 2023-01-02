@@ -49,7 +49,7 @@ public class SettingsMenu extends Menu {
     public void setMenuItems() {
         YCore yCore = YCore.get();
         ItemStack spawnpointSettings = yCore.itemFactory.create(Material.NETHER_STAR, yCore.getMessage("inventory.settings.items.spawnsettings.name"), yCore.getMessage("inventory.settings.items.spawnsettings.lore"));
-        ItemStack ysettingsMenu = yCore.itemFactory.create(Material.COMMAND_BLOCK, yCore.getMessage("inventory.yclientsettings.name"), yCore.getMessage("inventory.yclientsettings.lore"));
+        ItemStack ysettingsMenu = yCore.itemFactory.create(Material.COMMAND_BLOCK, yCore.getMessage("inventory.settings.items.yclientsettings.name"), yCore.getMessage("inventory.settings.items.yclientsettings.lore"));
 
 
 
