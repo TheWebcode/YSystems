@@ -74,6 +74,10 @@ public final class YCore extends JavaPlugin {
         console.sendMessage("----------------------------------------");
     }
 
+    public boolean isYClientAPIEnabled() {
+        return Bukkit.getPluginManager().getPlugin("YAPI") != null;
+    }
+
     public CommandManager getCommandManager() {
         return commandManager;
     }

@@ -18,5 +18,7 @@
   "inventory.spawnpointsettings.items.setspawn.lore": "&7Click to set the Spawnpoint to your position.",
   "inventory.yclientsettings.name": "&8&l>>&eYClient Settings",
   "inventory.yclientsettings.items.allowonlyyclient.name": "&aAllow only YClient",
-    "inventory.yclientsettings.items.allowonlyyclient.lore": "&7Allow only Users using YClient to join the Server."
+  "inventory.yclientsettings.items.allowonlyyclient.lore": "&7Allow only Users using YClient to join the Server.",
+  "inventory.yclientsettings.items.allowonlyyclient.noapi.name": "&cYClient API not found.",
+  "inventory.yclientsettings.items.allowonlyyclient.noapi.lore": "&7YClient API is required to use this feature."
 }
